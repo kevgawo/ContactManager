@@ -33,7 +33,7 @@ class ContactManger:
 
 new = ContactManger()
 
-check = input("To add contact press 1, To search name press 2, To delete contact press 3, To exit pres 4: ")
+check = input("To add contact press 1, To search name press 2, To delete contact press 3, To exit press 4: ")
 
 while check != "4":
 
@@ -46,5 +46,5 @@ while check != "4":
     elif check == "3":
         new.remove(input("Enter name: "))
 
-    check = input("To add contact press 1, To search name press 2, To delete contact press 3, To exit pres 4: ")
+    check = input("To add contact press 1, To search name press 2, To delete contact press 3, To exit press 4: ")
 

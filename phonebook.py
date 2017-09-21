@@ -1,3 +1,8 @@
+#Create a contact list
+#create a class for contacts
+#create a loop that prompts to add, delete and search contact
+
+
 class ContactManger:
 
     def __init__(self, person={}):
@@ -30,12 +35,19 @@ class ContactManger:
             del self.person[rmve]
             print (" Contact deleted ")
 
+    def show_contact(self):
+        for show in self.person.keys():
+            for details in self.person.values():
+                print (show, " ".join(details))     #joins the values of a list into a joint string
+
+
+
 
 new = ContactManger()
 
-check = input("To add contact press 1, To search name press 2, To delete contact press 3, To exit press 4: ")
+check = input("To add contact press 1, To search name press 2, To delete contact press 3, To show contact 4, To exit press 5:  " )
 
-while check != "4":
+while check != "5":
 
     if check == "1":
         new.add_person()
@@ -46,5 +58,9 @@ while check != "4":
     elif check == "3":
         new.remove(input("Enter name: "))
 
-    check = input("To add contact press 1, To search name press 2, To delete contact press 3, To exit press 4: ")
+    elif check == "4":
+        new.show_contact()
+
+
+    check = input("To add contact press 1, To search name press 2, To delete contact press 3, To show contact 4, To exit press 5: ")
 
